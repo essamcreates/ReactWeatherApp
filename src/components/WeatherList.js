@@ -32,4 +32,3 @@ function WeatherList({ data }) {
 }
 
 export default WeatherList;
-

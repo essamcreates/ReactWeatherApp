@@ -1,99 +1,130 @@
+/* App.css */
+
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Reset default styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body styles */
 body {
   font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #61a6ab; /* Background color (light blue) */
 }
 
+/* Paragraph styles */
 p {
   font-size: 1.6rem;
 }
 
+/* Heading styles */
 h1 {
   font-size: 6rem;
+  color: #333; /* Heading text color */
 }
 
+/* App container styles */
 .app {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Minimum height to cover the viewport */
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; /* Add some padding for better spacing */
+  text-align: center; /* Center align text */
 }
 
-.app:before {
-  content: '';
-  background: url('./assets/sunset.jpg') no-repeat center center/cover;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
+/* Search input styles */
 .app .search {
+  margin-bottom: 1rem; /* Add some spacing between input and content */
   text-align: center;
-  padding: 1rem;
+  color: #fff;
 }
+
+.app .search::placeholder {
+  color: #556ea0;
+}
+
+
 
 .app input {
-  padding: 0.7rem 1.5rem;
+  padding: .7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.1);
-  color: #f8f8f8;
+  color: #333; /* Input text color */
+  transition: background-color 0.3s, border-color 0.3s; /* Add smooth transitions */
 }
 
-::placeholder {
-  color: #f8f8f8;
+.app input::placeholder {
+  text-align: center; 
+  color: #f9fcfc;
 }
 
+.app input:focus {
+  background-color: rgba(255, 255, 255, 0.2); /* Input background color on focus */
+  border-color: #fff; /* Input border color on focus */
+}
+
+/* Container styles */
 .container {
   max-width: 700px;
-  height: 700px;
-  margin: auto;
-  padding: 0 1rem;
-  position: relative;
-  top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2rem; /* Add padding for better spacing */
+  background-color: rgba(167, 113, 161, 0.7); /* Adjust the color and opacity as needed */
+  border-radius: 12px; /* Container border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Container box shadow */
+  text-align: center; /* Center align content */
 }
 
+
+/* Top section styles */
 .app .top {
-  width: 100%;
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 
-.app .description {
-  position: relative;
-  right: -90%;
-  transform-origin: 0 0;
-  transform: rotate(269deg);
+.app .location p {
+  font-size: 2rem; /* Location text size */
+  font-weight: 600; /* Location text boldness */
+  color: #333; /* Location text color */
 }
 
+.app .temp h1 {
+  font-size: 4rem; /* Temperature text size */
+}
+
+.app .description p {
+  font-size: 1.8rem; /* Description text size */
+  padding: 1rem;
+}
+
+/* Bottom section styles */
 .app .bottom {
   display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  width: 100%;
-  margin: 1rem auto;
-  padding: 1rem;
+  justify-content: space-around;
+  justify-content: space-between;
+  margin: 2rem auto;
+  padding: 4rem;
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(204, 89, 89, 0.3); /* Bottom section background color */
+  box-shadow: 0 0 5px rgba(153, 38, 38, 0.3); /* Bottom section box shadow */
 }
 
-.bold {
-  font-weight: 700;
+.app .bottom .bold {
+  font-weight: 600; /* Bold text in the bottom section */
 }
+
+ 
